@@ -32,15 +32,14 @@ li {
     list-style: none;
     transform: translateY(3px);
     transform: scale(1);
+    transition-duration: 0.5s;
 }
 
-a:hover {
-    text-shadow: 0px 6px 9px #caf0f8;
-}
 
 li:hover {
     transform: translateY(0px);
     transform: scale(1.2);
+    text-shadow: 0px 6px 9px #caf0f8;
 }
 
 /* TYPOGRAPHY */
@@ -55,6 +54,10 @@ h1 {
     text-shadow: 0px 2px 9px #caf0f8;
     padding: 40px;
     border-radius: 25px;
+    /* margin-right: 350px;
+    margin-left: 350px;
+    border-right: 5px solid;
+    border-left: 5px solid; */
 }
 
 
@@ -65,9 +68,11 @@ h2 {
     color: white;
     text-shadow: 0px 2px 9px #ffc300;
     transform: scale(1);
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
-h2:hover{
+h2:hover {
     transform: scale(2);
 }
 
@@ -128,12 +133,15 @@ hr {
     text-shadow: 0px 0px 4px cornflowerblue;
     transform: translateY(-3px);
     transform: scale(1);
+    cursor: pointer;
+    transition-duration: 0.2s;
 }
 
 .btn:active {
     transform: translateY(3);
-}   
-.btn:hover{
+}
+
+.btn:hover {
     transform: scale(1.1);
 }
 
