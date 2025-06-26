@@ -1,17 +1,28 @@
 /* BASE STYLES */
 
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+
+}
+
 body {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(180deg, rgba(13, 27, 42, 1) 10%, rgba(202, 240, 248, 1) 24%, rgba(13, 27, 42, 1) 95%);
     font-family: 'JETBRAINS MONO';
-    background-color: #0d1b2a;
-    animation: load 7s;
+    animation: load 3s ease-in;
 }
 
 nav {
-    animation: nav-load 7s;
+    animation: nav-load 3s;
 }
 
 ul {
@@ -23,7 +34,6 @@ ul {
     font-weight: bolder;
     border-radius: 25px;
     letter-spacing: 5px;
-
 }
 
 a {
@@ -54,12 +64,12 @@ h1 {
     font-weight: bolder;
     display: flex;
     justify-content: center;
-    color: white;
+    color: #03182e;
     letter-spacing: 30px;
     /* text-shadow: 0px 2px 9px #caf0f8; */
     padding: 40px;
     border-radius: 25px;
-    animation: heading-shadow 2s infinite alternate;
+    animation: heading-shadow 5s infinite alternate;
     cursor: default;
     user-select: none;
     /* margin-right: 350px;
@@ -73,6 +83,7 @@ h2 {
     font-size: medium;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     color: white;
     text-shadow: 0px 2px 9px #ffc300;
     transform: scale(1);
@@ -120,12 +131,12 @@ hr {
     padding-right: 20px;
     border-radius: 20px;
     box-shadow: 0px 3px 6px 0.08em #e0e1dd;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: right;
     color: #0d1b2a;
     background-color: #778da9;
     text-shadow: 1px 1px 8px white;
-    font-family: "digital-7";
+    font-family: "digital-7", 'JETBRAINS MONO';
     user-select: none;
 }
 
@@ -236,10 +247,35 @@ hr {
 
 @keyframes heading-shadow {
     0% {
-        text-shadow: 0px 0px 10px #caf0f8;
+        text-shadow: 0px 0px 10px #03182e;
     }
 
     100% {
-        text-shadow: 0px 0px 30px #caf0f8;
+        text-shadow: 0px 0px 30px #03182e;
+        color: white;
     }
+}
+
+.scaler {
+    transform: scale(0.8);
+    transform-origin: top center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1,
+h2,
+#display,
+.btn {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
 }
