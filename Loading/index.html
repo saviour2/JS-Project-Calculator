@@ -23,10 +23,12 @@
     </div>
 
     <script>
+        const loadingDuration = 9900;
+
         setTimeout(() => {
-            console.log("7sec");
+            console.log("Loading complete");
             loadpage();
-        }, 9850);
+        }, loadingDuration);
 
         function loadpage() {
             window.location.replace("../Calculator/index.html");

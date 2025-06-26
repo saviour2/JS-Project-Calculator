@@ -6,7 +6,8 @@ body {
 }
 
 body {
-    animation: fading-in 3s ease-in, fading-out 3s ease-out 6900ms;
+    animation: fading-in 3s ease-in, fading-out 3s ease-out 6800ms;
+    animation-fill-mode: both;
 }
 
 body,
