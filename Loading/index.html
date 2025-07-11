@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="layer">
+            <div class="box">
+                <span class="load-bar" id="bar1"></span>
+                <span class="load-bar" id="bar2"></span>
+                <span class="load-bar" id="bar3"></span>
+                <span class="load-bar" id="bar4"></span>
+                <span class="load-bar" id="bar5"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const loadingDuration = 9900;
+
+        setTimeout(() => {
+            console.log("Loading complete");
+            loadpage();
+        }, loadingDuration);
+
+        function loadpage() {
+            window.location.replace("../Calculator/index.html");
+        }
+    </script>
+</body>
+
+</html>

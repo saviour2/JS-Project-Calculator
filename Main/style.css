@@ -1,0 +1,248 @@
+/* ===========================[ FONTS ]============================= */
+@font-face {
+    font-family: 'JetBrainsMono-ExtraLight';
+    src: url('resources/JetBrainsMono-ExtraLight.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* ===========================[ RESET & BASE ]============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrainsMono-ExtraLight', monospace;
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    scrollbar-color: #caf0f8 transparent;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===========================[ NAVIGATION ]============================= */
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    padding: 1em;
+    font-size: 1em;
+    letter-spacing: 5px;
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+    animation: drop 2s linear;
+}
+
+li:hover {
+    transform: translateY(0) scale(1.4);
+    text-shadow: 0 6px 9px #caf0f8;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #caf0f8;
+    transition: color 0.3s ease;
+}
+
+/* Navigation dropdown styles */
+.nave-menu {
+    display: none;
+    position: absolute;
+    background-color: #0d1b2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#menu2:hover {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ===========================[ MAIN CONTENT ]============================= */
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12em;
+}
+
+.heading {
+    margin-top: -3em;
+    margin-bottom: 2em;
+    font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 30px;
+    color: #caf0f8;
+    text-shadow: 0px 5px 30px #caf0f8;
+}
+
+section {
+    padding: 3%;
+    height: auto;
+    min-height: 40vh;
+    width: 50vw;
+    max-width: 800px;
+    color: white;
+    background-color: #0d1b2a;
+    box-shadow: 4px 4px 9px 9px #caf0f8;
+    border-radius: 12px;
+    animation: slideUp 1s ease-out;
+    overflow: hidden;
+}
+
+/* ===========================[ TYPOGRAPHY ]============================= */
+h1 {
+    margin-top: 5%;
+    font-size: 3em;
+    font-weight: 900;
+    color: #FFD700;
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: wheat;
+}
+
+.project {
+    color: #FFD700;
+}
+
+h3 {
+    color: #FFD700;
+    font-size: smaller;
+    margin-top: 5%;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 15em;
+    width: fit-content;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: scaleIn 2s ease-in-out 0.6s;
+}
+
+h3:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px 2px #FFD700;
+}
+
+/* ===========================[ MEDIA ELEMENTS ]============================= */
+img {
+    width: 1.2em;
+    height: auto;
+}
+
+/* ===========================[ UTILITY CLASSES ]============================= */
+.nave-menu {
+    display: none;
+}
+
+/* Content spacing utilities */
+.content-spacing {
+    margin-bottom: 1em;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* ===========================[ ANIMATIONS ]============================= */
+
+@keyframes drop {
+    from {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(4em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    66% {
+        opacity: 1;
+        transform: scale(1.1);
+        box-shadow: 0 0 8px 3px #FFD700;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===========================[ RESPONSIVE DESIGN ]============================= */
+@media (max-width: 768px) {
+    section {
+        width: 90vw;
+        height: auto;
+        margin: 0 5vw;
+    }
+
+    main {
+        margin-top: 8em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    li {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    h3 {
+        max-width: 12em;
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
